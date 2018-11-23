@@ -1,0 +1,18 @@
+html
+    head
+        meta(charset='utf-8')
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Gulp, SASS + Pug Templates
+        link(href='/css/bootstrap.css',type="text/css", rel='stylesheet')
+        link(href='/css/style.css',type="text/css", rel='stylesheet')
+    body
+        h1 My todolist trop nice!!
+        ul  
+            -var tableau= ['a','b','c']
+            each todo in tab
+                li=todo
+                    a(href='test')
+        form(action='/todo/add/', method='post')
+            input(type="text", name='newtodo', placeholder='Ajoutez une todo')
+            button(type='submit') Add a todo
